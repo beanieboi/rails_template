@@ -1,0 +1,12 @@
+<h2>Log in</h2>
+
+<%= form_for(User.new, url: sessions_path) do |f| %>
+  <div>
+    <%= f.text_field :email, required: false, autofocus: true %>
+    <%= f.password_field :password, required: false %>
+  </div>
+
+  <div>
+    <%= f.submit "Log in" %>
+  </div>
+<% end %>
